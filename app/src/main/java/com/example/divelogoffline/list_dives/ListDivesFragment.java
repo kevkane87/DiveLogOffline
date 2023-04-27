@@ -1,4 +1,9 @@
 package com.example.divelogoffline.list_dives;
 
-public class ListDivesFragment {
+import androidx.fragment.app.Fragment;
+
+public class ListDivesFragment extends Fragment {
+
+
+
 }
