@@ -1,6 +1,7 @@
 package com.example.divelogoffline;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -17,5 +18,8 @@ public interface DiveDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insertDive(Dive dive);
+
+    @Query("DELETE FROM Dive where id = :id")
+    public void deleteDiveById(int id);
 
 }

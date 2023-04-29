@@ -17,8 +17,7 @@ public class ListDivesAdapter  extends ListAdapter<Dive, ListDivesAdapter.ViewHo
         super(diffCallback);
     }
 
-
-    class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
 
         public ItemDiveBinding binding;
 
@@ -31,15 +30,14 @@ public class ListDivesAdapter  extends ListAdapter<Dive, ListDivesAdapter.ViewHo
             binding.itemDate.setText(item.date);
             binding.itemDiveTitle.setText(item.diveTitle);
             binding.itemDiveSite.setText(item.diveSite);
-            binding.itemBottomTime.setText(item.bottomTime);
-            binding.itemMaxDepth.setText(item.maxDepth);
+            binding.itemBottomTime.setText(Integer.toString(item.bottomTime));
+            binding.itemMaxDepth.setText(Integer.toString(item.maxDepth));
         }
-
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        ItemDiveBinding binding = ItemDiveBinding.inflate(
                LayoutInflater.from(parent.getContext()),
                parent,
@@ -52,6 +50,10 @@ public class ListDivesAdapter  extends ListAdapter<Dive, ListDivesAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, int position) {
         Dive current = getItem(position);
         holder.bind(current);
+    }
+
+    public Dive getCurrentDive(int position) {
+        return getItem(position);
     }
 
     static class DiveDiff extends DiffUtil.ItemCallback<Dive> {

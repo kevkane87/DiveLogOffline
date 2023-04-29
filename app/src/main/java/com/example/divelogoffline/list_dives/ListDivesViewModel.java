@@ -3,7 +3,6 @@ package com.example.divelogoffline.list_dives;
 import android.app.Application;
 
 import androidx.lifecycle.ViewModel;
-import androidx.room.Database;
 
 import com.example.divelogoffline.Dive;
 import com.example.divelogoffline.Repository;
@@ -21,5 +20,7 @@ public class ListDivesViewModel extends ViewModel {
     }
 
     Flowable<List<Dive>> getAllDives() { return repository.getAllDives(); }
+
+    public void deleteDive(int diveID){repository.deleteDive(diveID);}
 
 }
