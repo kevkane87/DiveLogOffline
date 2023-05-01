@@ -10,8 +10,8 @@
         android:id="@+id/cardLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/ocean_blue"
-        android:backgroundTint="@color/ocean_blue"
+        android:background="@color/ocean_blue_light"
+        android:backgroundTint="@color/ocean_blue_light"
         android:orientation="vertical"
         app:cardCornerRadius="10dp"
         app:cardUseCompatPadding="true"
@@ -50,6 +50,7 @@
 
                     <EditText
                         android:id="@+id/date_input"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_small"
@@ -69,11 +70,13 @@
 
                     <EditText
                         android:id="@+id/dive_name_input"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_small"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName"
+                        android:textColor="@color/white" />
                 </TableRow>
 
                 <TableRow
@@ -88,11 +91,13 @@
 
                     <EditText
                         android:id="@+id/dive_site_input"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_small"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName"
+                        android:textColor="@color/white" />
                 </TableRow>
 
                 <TableRow
@@ -107,11 +112,13 @@
 
                     <EditText
                         android:id="@+id/bottom_time_input"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_small"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textColor="@color/white" />
                 </TableRow>
 
                 <TableRow
@@ -126,11 +133,13 @@
 
                     <EditText
                         android:id="@+id/max_depth_input"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_small"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textColor="@color/white" />
                 </TableRow>
 
             </TableLayout>

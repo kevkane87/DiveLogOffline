@@ -8,7 +8,7 @@
         android:id="@+id/list_dives_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/ocean_blue_dark"
+        android:background="@drawable/background_gradient"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

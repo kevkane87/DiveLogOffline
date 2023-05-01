@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/ocean_blue"
+        android:background="@color/ocean_blue_light"
         android:paddingTop="8dp"
         android:paddingBottom="16dp">
 
@@ -23,7 +23,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
-            android:background="@color/ocean_blue"
             android:text="Dive 1"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -35,9 +34,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_normal"
-            android:background="@color/ocean_blue"
             android:text="TextView"
-            android:textColor="@color/coral_dark"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,9 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
-            android:background="@color/ocean_blue"
             android:text="TextView"
-            android:textColor="@color/coral"
+            android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -58,24 +56,23 @@
             android:id="@+id/item_max_depth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_normal"
-            android:background="@color/ocean_blue"
+            android:layout_marginStart="@dimen/margin_small"
             android:text="TextView"
-            android:textColor="@color/coral"
+            android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/item_bottom_time" />
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
-            android:background="@color/ocean_blue"
-            android:text="Dive site:"
+            android:text="@string/dive_site"
             android:textColor="@color/coral_dark"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/item_dive_title"
             app:layout_constraintTop_toBottomOf="@+id/item_dive_title" />
 
@@ -84,10 +81,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
-            android:background="@color/ocean_blue"
-            android:text="Bottom time:"
+            android:text="@string/bottom_time_mins"
             android:textColor="@color/coral_dark"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/item_dive_title"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -95,24 +92,24 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_small"
-            android:background="@color/ocean_blue"
-            android:text="Max depth:"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="@string/max_depth_m"
             android:textColor="@color/coral_dark"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@+id/item_max_depth"
-            app:layout_constraintTop_toTopOf="@+id/item_max_depth" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/item_bottom_time"
+            app:layout_constraintTop_toTopOf="@+id/item_bottom_time" />
 
         <TextView
             android:id="@+id/item_dive_site"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/ocean_blue"
+            android:layout_marginStart="@dimen/margin_small"
             android:text="TextView"
-            android:textColor="@color/coral"
+            android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/item_bottom_time"
+            app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/textView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
