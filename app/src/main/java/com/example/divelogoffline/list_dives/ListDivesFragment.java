@@ -75,12 +75,6 @@ public class ListDivesFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
 
-              /*  RecyclerView rv_list_frames;
-
-                public frames getItem(int position) {
-                    return rv_list_frames.get(position);
-                }*/
-
                 Dive dive = adapter.getCurrentDive(viewHolder.getAbsoluteAdapterPosition());
                 Log.d(TAG, "dive id: " + dive.id);
                 viewModel.deleteDive(dive.id);
